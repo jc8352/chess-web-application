@@ -21,8 +21,8 @@ This is a real-time multiplayer chess application with a built-in clock, impleme
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jc8352/chess-web-app.git
-   cd chess-web-app
+   git clone https://github.com/jc8352/chess-web-application.git
+   cd chess-web-application
    ```
 
 2. Install the dependencies:
