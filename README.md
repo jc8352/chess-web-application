@@ -50,7 +50,7 @@ This is a real-time multiplayer chess application with a built-in clock, impleme
 <img src="public/img/chess-game-example.png" width="600">
 
 ### Online Version
-You can play the game online at thechessgame.azurewebsites.net
+You can play the game online at https://thechessgame.azurewebsites.net/
 
 ### Notes
 - For simplicity, the time control of each game is the time control that is specified by the player that issues the game request first.
