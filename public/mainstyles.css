@@ -1,0 +1,128 @@
+body {
+	background-color: black;
+	color: aliceblue;
+}
+
+.light-mode {
+	background-color: grey;
+	color:black;
+}
+
+
+#navigation-bar {
+	height: 50px;
+	/*background-color: #404240;*/
+	margin-left: 20px;
+}
+
+.nav {
+	float: left;
+}
+
+.nav, .useropt{
+	color: aliceblue;
+	font-size: 22px;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.useropt {
+	float: right;
+}
+
+
+#options {
+	white-space: nowrap;
+}
+
+
+#left-block {
+	height: 636px;
+	width: 300px;
+}
+
+#right-block {
+	height:636px;
+	width: 300px;
+}
+
+#playnow {
+	/*margin-top:30px;*/
+	width: 250px;
+	height:50px;
+	/*
+	height: 45px;
+	width: 250px;
+	text-align: center;
+	*/
+}
+
+.playbutton {
+	margin-left: 95px;
+	margin-right: 125px;
+	margin-top: 5px;
+}
+
+#main {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 20px;
+}
+#board1 {
+	width: 540px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#something {
+	height: 42px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tab-panel {
+	height: 300px;
+	background: #e6f7e7;
+	margin-top: 15px;
+	overflow-wrap: break-word;
+	overflow-y:scroll;
+}
+
+#playboard {
+	width: 580px;
+	margin: 0;
+	/*padding-top: 20px;*/
+}
+
+p {
+	display: inline;
+	color: red;
+	font-size: 40px;
+	margin-top: 0px;
+	font-family: "digital-clock-font";
+}
+
+#above-pb, #below-pb {
+	display: flex;
+	justify-content: space-between;
+}
+
+.middle-users {
+	font-size: 25px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+@font-face {
+	font-family:"digital-clock-font";
+	src: url("digital-7/digital-7 (mono italic).ttf");
+}
+
+
+#viewboard1 {
+	width: 250px;
+}
+
+#viewboard2 {
+	width: 250px;
+}

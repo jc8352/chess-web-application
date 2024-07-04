@@ -1,0 +1,21 @@
+{
+  "name": "chess-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2"
+  }
+}

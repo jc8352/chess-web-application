@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mainstyles.css">
+		<link rel="stylesheet" type="text/css" href="chessboard-1.0.0.css"></link>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"
+  				integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  				crossorigin="anonymous"></script>
+  		<script
+  			src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+  			integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+  			crossorigin="anonymous"></script>
+		<script src="chessboard-1.0.0.js"></script>
+
+    <script src="chess.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div id="navigation-bar">
+      <div id="dark" class="material-icons">toggle_on</div>
+      <div id="light" class="material-icons" style="visibility:hidden">toggle_off</div>
+    </div>
+
+    <div id="main">
+      <div id="left-block">
+        <div id="something">
+          <div></div>
+          <div></div>
+        </div>
+        <div id="gameviewer2">
+        </div>
+        <div class="tab-panel" style="color:black">
+          <div><b>Game</b></div>
+          <br></br>
+          <div>
+            <label>Status:</label>
+            <div id="status"></div>
+          </div>
+          <br></br>
+          <label>FEN:</label>
+          <div id="fen"></div>
+          <label>PGN:</label>
+          <div class="pgn-stuff">
+            <div id="pgn"></div>
+            <div id="result"></div>
+          </div>
+        </div>
+      </div>
+      <div id="center-block">
+        <div id="above-pb">
+          <div class="middle-users">
+            <div>opponent</div>
+          </div>
+          <div class="middle-space"></div>
+          <div class="middle-clocks">
+            <p id="black-incr" style="visibility:hidden">0</p>
+            <p id="black-ms" style="visibility:hidden">0000</p>
+            <p aria-label="clock" class="clock start clock_one">0:00</p>
+            <!--<p id="black-mins">0</p>
+            <sep>:</sep>
+            <p id="black-secs">00</p>-->
+          </div>
+        </div>
+        <div id="playboard"></div>
+        <div id="below-pb">
+          <div class="middle-users">
+            <div>you</div>
+          </div>
+          <div class="middle-space"></div>
+          <div class="middle-clocks">
+            <p id="white-incr" style="visibility:hidden">0</p>
+            <p id="white-ms" style="visibility:hidden">0000</p>
+            <p aria-label="clock" class="clock start clock_two">0:00</p>
+            <!--<p id="white-mins">0</p>
+            <sep>:</sep>
+            <p id="white-secs">00</p>-->
+          </div>
+        </div>
+      </div>
+      <div id="right-block">
+        <div id="playnow">
+          <div id="options">
+            <label for="time">Time control:</label>
+            <select name="time" id="timecontrol">
+              <option value="1+0">1+0</option>
+              <option value="3+0" selected>3+0</option>
+              <option value="5+0">5+0</option>
+              <option value="1+1">1+1</option>
+              <option value="3+2">3+2</option> 
+            </select>
+          </div>
+          <button id="play-button" type="button" class="playbutton" onclick="startGame()">PLAY</button>
+        </div>
+
+      </div>
+    </div>
+
+    <style>
+      .material-icons {
+        font-size: 40px;
+        color: lightblue;
+        margin-right: 10px;
+        margin-top: 5px;
+        float: right;
+      }
+      .material-icons:hover {
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        $("#dark").click(function myFunction() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+        var x = document.getElementById("dark");
+        x.style.visibility = "hidden";
+        var y = document.getElementById("light");
+        y.style.visibility = "visible";
+        })
+      })
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#light").click(function myFunction() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+        var x = document.getElementById("light");
+        x.style.visibility = "hidden";
+        var y = document.getElementById("dark");
+        y.style.visibility = "visible";
+        })
+      })
+    </script>
+
+    <script type="text/javascript" src="timer.js"></script>
+    <script type="text/javascript" src="app.clock.js"></script>
+    <script type="text/javascript" src="playaction.js"></script>
+  </body>
+</html>
